@@ -1,27 +1,24 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Security.Authentication;
 namespace Project
 {
-    public class HelloWorld
+    public class Euros_to_Dolars
     {
         public static void Main()
         {
-            const string Input_Width = "Enter the width of the rectangle: ";
-            const string Input_Height="Enter the height of the rectangle: ";
-            const string Result = "The area of the rectangle is: ";
+            const double Exchange = 1.12;
+            const string Input= "Enter amount in euros: ";
+            const string Result = "Amount in dollars: ";
 
-            double Width, Height, Area;
+            double Euros, Dollars;
 
-            Console.Write(Input_Width);
-            Width= double.Parse(Console.ReadLine());
+            Console.Write(Input);
+            Euros= double.Parse(Console.ReadLine());
 
-            Console.Write(Input_Height);
-            Height = double.Parse(Console.ReadLine());
+            Dollars = Euros * Exchange;
 
-            Area = Width * Height;
-
-
-            Console.Write(Result+Area);
+            Console.Write(Result+Dollars);
         }
     }
 }
