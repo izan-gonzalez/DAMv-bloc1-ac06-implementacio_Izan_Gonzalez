@@ -5,7 +5,7 @@ using System.Security.Authentication;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Project
 {
-    public class Euros_to_Dolars
+    public class Average
     {
         public static void Main()
         {
