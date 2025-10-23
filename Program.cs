@@ -1,32 +1,40 @@
 ﻿using System;
-using System.Diagnostics.Metrics;
-using System.Runtime.InteropServices;
-using System.Security.Authentication;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Project
 {
-    public class Euros_to_Dolars
+    public class Is_Natural
     {
         public static void Main()
         {
-            const string Input1= "Enter the first number: ";
-            const string Input2= "Enter the second number: ";
-            const string Input3= "Enter the third number: ";
-            const string Result = "The average is: ";
+            const string Ok = "Your number is natural: ";
+            const string Ko = "Your number is not natural: ";
+            const string Input = "Enter a value to check if it's a natural number: ";
 
-            int Num1, Num2, Num3, Average;
+            int Value;
+            bool isNatural;
 
-            Console.Write(Input1);
-            Num1= int.Parse(Console.ReadLine());
+            isNatural = false;
 
-            Console.Write(Input2);
-            Num2 = int.Parse(Console.ReadLine());
+            Console.Write(Input);
+            Value = int.Parse(Console.ReadLine());
 
-            Console.Write(Input3);
-            Num3 = int.Parse(Console.ReadLine());
+            if ((Value >= 0) && (Value == Value))
+            {
+                isNatural = true;
+            }
+            else
+            {
+                isNatural = false;
+            }
 
-            Average = (Num1 + Num2 + Num3) / 3;
-            Console.Write(Result+Average);
+            if (isNatural)
+            {
+                Console.Write(Ok);
+            }
+            else
+            {
+                Console.Write(Ko);
+
+            }
         }
     }
 }
