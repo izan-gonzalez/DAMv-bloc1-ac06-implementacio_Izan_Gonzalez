@@ -5,35 +5,23 @@ namespace Project
     {
         public static void Main()
         {
-            const string Ok = "Your number is natural: ";
-            const string Ko = "Your number is not natural: ";
-            const string Input = "Enter a value to check if it's a natural number: ";
+            const string Input = "Exter a value to check if it's within interval: ";
+            const string Ok = "is within the interval (5, 50)";
+            const string Ko = "is NOT whithin the interval";
 
-            int Value;
-            bool isNatural;
-
-            isNatural = false;
+            int Num;
 
             Console.Write(Input);
-            Value = int.Parse(Console.ReadLine());
 
-            if ((Value >= 0) && (Value == Value))
-            {
-                isNatural = true;
-            }
-            else
-            {
-                isNatural = false;
-            }
+            Num = int.Parse(Console.ReadLine());
 
-            if (isNatural)
+            if ((Num > 5) && (Num < 50))
             {
                 Console.Write(Ok);
             }
             else
             {
                 Console.Write(Ko);
-
             }
         }
     }
